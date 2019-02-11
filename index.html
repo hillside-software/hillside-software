@@ -387,13 +387,13 @@
 						<div class="col-sm-4">
 							<h5>Send A Message</h5>
 							<div class="form-wrapper clearfix">
-								<form class="form-contact email-form" action="https://payments.hillsoft.com/support/" method="post">
+								<form class="form-contact email-form" data-success="Thanks for your submission, we will be in touch shortly." data-error="Please fill all fields correctly." success-redirect="" data-netlify="true">
 									<div class="inputs-wrapper">
 										<input class="form-name validate-required" type="text" placeholder="Your Name" name="name">
 										<input class="form-email validate-required validate-email" type="text" placeholder="Your Email Address" name="email">
 										<textarea class="form-message validate-required" name="message" rows="4" placeholder="Your Message"></textarea>
-										<div class="g-recaptcha" data-sitekey="6Le-dxsUAAAAACNBQTRFvtHly94_gLM80PLtN8Nq"></div>
-										
+										<div data-netlify-recaptcha="true"></div>
+
 										<div class="form-success">
 											<span class="text-white">Message sent - Thanks for your enquiry</span>
 										</div>
