@@ -22,7 +22,7 @@
         	<link rel="stylesheet" type="text/css" href="css/ie9.css" />
 					<script src="js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 				<![endif]-->
-        <link async defer href='http://fonts.googleapis.com/css?family=Arimo:400,700,400italic%7COpen+Sans:400italic,400,700%7CRaleway:700' rel='stylesheet' type='text/css'>
+        <link async defer href='//fonts.googleapis.com/css?family=Arimo:400,700,400italic%7COpen+Sans:400italic,400,700%7CRaleway:700' rel='stylesheet' type='text/css'>
 		<script src='https://www.google.com/recaptcha/api.js'></script>
 		<script src='./js/recaptcha-client.js'></script>
         <!--<link href="css/font-helvetica.css" rel="stylesheet" type="text/css">-->
@@ -387,13 +387,27 @@
 						<div class="col-sm-4">
 							<h5>Send A Message</h5>
 							<div class="form-wrapper clearfix">
-								<form class="form-contact email-form" action="https://payments.hillsoft.com/support/" method="post">
+								<form name="contact" class="form-contact email-form" data-success="Thanks for your submission, we will be in touch shortly." data-error="Please fill all fields correctly." success-redirect="" data-netlify="true" netlify-honeypot="a-field">
+									<style>
+										.off-screen {
+											display: inline-block;
+											overflow: hidden;
+											height: 0px;
+											width: 0px;
+											/* left: -1000px; */
+										}
+									</style>
+									<p class="off-screen">
+										<label>Don’t fill this out if you're human: <input name="a-field" /></label>
+									</p>
+
+
 									<div class="inputs-wrapper">
 										<input class="form-name validate-required" type="text" placeholder="Your Name" name="name">
 										<input class="form-email validate-required validate-email" type="text" placeholder="Your Email Address" name="email">
 										<textarea class="form-message validate-required" name="message" rows="4" placeholder="Your Message"></textarea>
-										<div class="g-recaptcha" data-sitekey="6Le-dxsUAAAAACNBQTRFvtHly94_gLM80PLtN8Nq"></div>
-										
+										<div data-netlify-recaptcha="true"></div>
+
 										<div class="form-success">
 											<span class="text-white">Message sent - Thanks for your enquiry</span>
 										</div>
