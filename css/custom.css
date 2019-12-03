@@ -1,8 +1,5 @@
 /****** PLACE YOUR CUSTOM STYLES HERE ******/
 
-.centered-footer {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  width: 100%;
+.image-slider {
+  height: 80vh;
 }
