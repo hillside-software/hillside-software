@@ -59,7 +59,7 @@ body.boxed-layout,
 .boxed-layout .nav-container,
 .boxed-layout .main-container,
 .boxed-layout nav {
-  max-width: 1366px;
+  max-width: 100vw;
   margin: 0 auto;
   left: 0;
   right: 0;
@@ -948,7 +948,9 @@ nav.bg-dark .logo-dark {
   width: auto;
 }
 .menu li a {
-  font-size: 11px;
+  font-size: 12px;
+  padding-left: 15px;
+  padding-right: 15px;
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 1px;
@@ -962,9 +964,10 @@ nav.bg-dark .logo-dark {
 }
 .menu li a:hover {
   opacity: 1 !important;
+  color: white !important;
+  background-color: #292929 !important;
 }
 .menu > li {
-  margin-right: 32px;
   float: left;
   position: relative;
   transition: all 0.3s ease;
